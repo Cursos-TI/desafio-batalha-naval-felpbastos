@@ -5,6 +5,45 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    char tabuleiro[10][10];
+    int i, j;
+
+    // Inicializa o tabuleiro com '0'
+    for(i = 0; i < 10; i++) {
+        for(j = 0; j < 10; j++) {
+            tabuleiro[i][j] = '0';
+        }
+    }
+    // Navio vertical (tamanho 3)
+    tabuleiro[1][2] = '3';
+    tabuleiro[2][2] = '3';
+    tabuleiro[3][2] = '3';
+
+    // Navio horizontal (tamanho 3)
+    tabuleiro[5][4] = '3';
+    tabuleiro[5][5] = '3';
+    tabuleiro[5][6] = '3';
+
+    // Imprime cabeçalho das colunas (1 a 10)
+    printf("   ");
+    for(j = 1; j <= 10; j++) {
+        printf(" %d", j);
+    }
+    printf("\n");
+
+    // Imprime linhas (A a J) e o tabuleiro
+    for(i = 0; i < 10; i++) {
+        printf(" %c ", 'A' + i);
+
+        for(j = 0; j < 10; j++) {
+            printf(" %c", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+
+    return 0;
+}
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
@@ -35,6 +74,3 @@ int main() {
     // 0 0 1 0 0
     // 1 1 1 1 1
     // 0 0 1 0 0
-
-    return 0;
-}
